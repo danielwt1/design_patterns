@@ -4,17 +4,13 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-/**
- * Extends T to be able to use the validation rules in the model
- *
- * @param <T>
- */
-public class ValidationRule<T,M> {
-    private final Predicate<T> conditionRule;
-    private final Consumer<M> onSuccess;
+
+public class ValidationRule<K,V> {
+    private final Predicate<K> conditionRule;
+    private final Consumer<V> onSuccess;
 
 
-    public ValidationRule(Predicate<T> conditionRule, Consumer<M> onSuccess) {
+    public ValidationRule(Predicate<K> conditionRule, Consumer<V> onSuccess) {
         this.conditionRule = conditionRule;
         this.onSuccess = onSuccess;
     }
