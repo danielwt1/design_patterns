@@ -1,11 +1,11 @@
 package org.example.chainresponsability.model;
 
 public class SuperClass {
-    private String name;
-    private String lastName;
-    private String email;
-    private Long totalPrices;
-    private boolean isActive ;
+    protected String name;
+    protected String lastName;
+    protected String email;
+    protected Long totalPrices;
+    protected boolean isActive ;
 
     public String getName() {
         return name;

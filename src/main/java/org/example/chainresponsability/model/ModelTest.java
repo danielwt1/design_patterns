@@ -11,9 +11,9 @@ public class ModelTest extends SuperClass{
     static {
         rules.add(new ValidationRule<>(model -> !model.getPrices().isEmpty(), model -> model.setName("Name")));
         rules.add(new ValidationRule<>(model -> model.getPrices().isEmpty(), model -> model.setActive(true)));
+        rules.add(new ValidationRule<>(model -> model.getPrices().isEmpty(), model -> model.setTotalPrices(0L)));
     }
     public ModelTest(ModelRequest request) {
         ValidationRule.executeValidation(this, rules, request);
-
     }
 }
